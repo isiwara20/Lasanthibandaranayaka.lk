@@ -1,0 +1,22 @@
+[
+  {
+    "id": "book_1",
+    "name": "Nimali Perera",
+    "phone": "0777958184",
+    "service": "Bridal Makeup",
+    "date": "2026-12-15",
+    "notes": "Kandyan wedding dressing in Dambulla with 2 bridesmaids.",
+    "status": "Confirmed",
+    "created_at": "2026-11-24 17:30:00"
+  },
+  {
+    "id": "book_2",
+    "name": "Dilki Madushani",
+    "phone": "0712345678",
+    "service": "Hair Styling",
+    "date": "2026-12-20",
+    "notes": "Keratin hair smoothening and treatment.",
+    "status": "New",
+    "created_at": "2026-11-24 18:10:00"
+  }
+]
