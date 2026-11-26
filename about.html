@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -11,11 +11,23 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    (function() {
+      var t = localStorage.getItem('theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+  <script>
+    (function () {
+      const savedTheme = localStorage.getItem('lasanthi_theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    })();
+  </script>
 </head>
 <body>
 
   <!-- Header -->
-  <header class="site-header scrolled">
+  <header class="site-header">
     <div class="container nav-wrapper">
       <a href="index.html" class="brand-logo">
         <img src="assets/images/logo_transparent.png" alt="Lasanthi Bandaranayaka Salon and Academy (Pvt) Ltd" class="site-logo-img">
@@ -35,6 +47,10 @@
       </nav>
 
       <div class="header-action">
+        <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle theme" title="Switch Theme">
+          <i class="fa-solid fa-sun theme-icon-sun"></i>
+          <i class="fa-solid fa-moon theme-icon-moon"></i>
+        </button>
         <button class="btn-gold" data-open-modal="booking">
           <i class="fa-regular fa-calendar-check"></i>
           <span>Book Appointment</span>
@@ -47,7 +63,7 @@
   </header>
 
   <!-- Banner -->
-  <section class="page-banner">
+  <section class="page-banner banner-about">
     <div class="container">
       <span class="tag-label">Our Story</span>
       <h1 class="page-banner-title">About Lasanthi Bandaranayaka</h1>
@@ -65,7 +81,7 @@
     <div class="container about-grid">
       <div class="about-visual">
         <div class="about-image-frame">
-          <img src="assets/images/bridal_2.jpg" alt="Lasanthi Bandaranayaka Bridal Artistry">
+          <img src="assets/images/lasanthi-bandaranayaka-founder.jpg" alt="Lasanthi Bandaranayaka Founder & Master Bridal Stylist">
         </div>
         <div class="about-frame-decor"></div>
       </div>
@@ -99,7 +115,7 @@
   </section>
 
   <!-- Values & Philosophy Section -->
-  <section style="background: #110e0b; padding: 90px 0; border-top: 1px solid rgba(212, 175, 55, 0.2);">
+  <section class="inner-page-section" style="border-top: 1px solid rgba(212, 175, 55, 0.2);">
     <div class="container">
       <div class="section-header-center">
         <span class="tag-label">Our Philosophy</span>
@@ -107,13 +123,13 @@
         <p class="section-subtext">Uncompromising dedication to royal aesthetics, premium global cosmetic brands, and personalized hospitality.</p>
       </div>
 
-      <div class="services-catalog-grid" style="grid-template-columns: repeat(3, 1fr);">
+      <div class="services-catalog-grid">
         <div class="service-detail-card">
           <div class="service-card-head">
             <div class="service-card-icon"><i class="fa-solid fa-gem"></i></div>
             <h3 class="service-card-name">Authentic Tradition</h3>
           </div>
-          <p style="color: #c9bfb2; font-size: 0.95rem; line-height: 1.7;">
+          <p>
             We preserve Sri Lanka's heritage by ensuring authentic Kandyan royal headpiece placement, Nalalpatiya symmetry, and ceremonial saree folds that stand out with majestic grace.
           </p>
         </div>
@@ -123,8 +139,8 @@
             <div class="service-card-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
             <h3 class="service-card-name">World-Class Cosmetics</h3>
           </div>
-          <p style="color: #c9bfb2; font-size: 0.95rem; line-height: 1.7;">
-            We exclusively use tested, dermatologically-approved international luxury makeup brands including MAC, Kryolan, Huda Beauty, and EstÃ©e Lauder for long-lasting, waterproof bridal radiance.
+          <p>
+            We exclusively use tested, dermatologically-approved international luxury makeup brands including MAC, Kryolan, Huda Beauty, and Estée Lauder for long-lasting, waterproof bridal radiance.
           </p>
         </div>
 
@@ -133,7 +149,7 @@
             <div class="service-card-icon"><i class="fa-solid fa-heart"></i></div>
             <h3 class="service-card-name">VIP Bridal Experience</h3>
           </div>
-          <p style="color: #c9bfb2; font-size: 0.95rem; line-height: 1.7;">
+          <p>
             Enjoy total tranquility in our dedicated VIP Bridal Suite with plush lounge seating, calm ambiance, and attentive service for you and your retinue on your wedding morning.
           </p>
         </div>
@@ -170,6 +186,8 @@
           <li><a href="videos.html">Videos</a></li>
           <li><a href="gallery.html">Gallery</a></li>
           <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="feedback.php" style="color: var(--color-gold-300);"><i class="fa-solid fa-star"
+                style="font-size: 0.75rem;"></i> Review Us</a></li>
         </ul>
 
         <div class="social-links">
@@ -181,7 +199,11 @@
       </div>
 
       <div class="footer-bottom-copy">
-        &copy; 2025 Lasanthi Bandaranayaka. All Rights Reserved. No. 607, Kandalama Road, Lasanthi Salon, Dambulla.
+        <div class="footer-copy-text">&copy; 2025 Lasanthi Bandaranayaka. All Rights Reserved.</div>
+        <div class="footer-address-text">No. 607, Kandalama Road, Lasanthi Salon, Dambulla.</div>
+        <div class="footer-staff-wrap">
+          <a href="admin/login.php" class="footer-staff-link"><i class="fa-solid fa-lock"></i> Staff Portal</a>
+        </div>
       </div>
     </div>
   </footer>
@@ -190,10 +212,10 @@
   <div class="modal-backdrop" id="appointment-modal">
     <div class="modal-content-card">
       <button class="modal-close-btn" aria-label="Close modal"><i class="fa-solid fa-xmark"></i></button>
-      <div style="text-align: center; margin-bottom: 24px;">
+      <div class="modal-header-wrap">
         <span class="tag-label">Reservation</span>
-        <h2 style="font-family: var(--font-serif); color: #fff; font-size: 1.8rem;">Book an Appointment</h2>
-        <p style="color: var(--text-muted); font-size: 0.88rem; margin-top: 4px;">Connect with Lasanthi Salon Dambulla directly via WhatsApp</p>
+        <h2 class="modal-title">Book an Appointment</h2>
+        <p class="modal-subtitle">Connect with Lasanthi Salon Dambulla directly via WhatsApp</p>
       </div>
 
       <form id="booking-form">
@@ -246,4 +268,5 @@
   <script src="assets/js/main.js"></script>
 </body>
 </html>
+
 

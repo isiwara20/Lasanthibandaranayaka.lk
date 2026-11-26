@@ -1,25 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lasanthi Bandaranayaka | Salon & Academy (Pvt) Ltd - Bridal Hair & Beauty Dambulla</title>
-  <meta name="description" content="Official website of Lasanthi Bandaranayaka Salon & Academy in Dambulla. Premier destination for Royal Kandyan bridal dressing, advanced hair therapy, luxury skin care, and certified beauty academy courses.">
-  
+  <meta name="description"
+    content="Official website of Lasanthi Bandaranayaka Salon & Academy in Dambulla. Premier destination for Royal Kandyan bridal dressing, advanced hair therapy, luxury skin care, and certified beauty academy courses.">
+
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="assets/images/logo_transparent.png">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
 
   <!-- Font Awesome 6 Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    (function () {
+      var t = localStorage.getItem('theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+  <script>
+    (function () {
+      const savedTheme = localStorage.getItem('lasanthi_theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    })();
+  </script>
 </head>
+
 <body>
 
   <!-- ==========================================================================
@@ -28,7 +45,8 @@
   <header class="site-header">
     <div class="container nav-wrapper">
       <a href="index.html" class="brand-logo">
-        <img src="assets/images/logo_transparent.png" alt="Lasanthi Bandaranayaka Salon and Academy (Pvt) Ltd" class="site-logo-img">
+        <img src="assets/images/logo_transparent.png" alt="Lasanthi Bandaranayaka Salon and Academy (Pvt) Ltd"
+          class="site-logo-img">
       </a>
 
       <nav>
@@ -45,6 +63,10 @@
       </nav>
 
       <div class="header-action">
+        <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle theme" title="Switch Theme">
+          <i class="fa-solid fa-sun theme-icon-sun"></i>
+          <i class="fa-solid fa-moon theme-icon-moon"></i>
+        </button>
         <button class="btn-gold" data-open-modal="booking">
           <i class="fa-regular fa-calendar-check"></i>
           <span>Book Appointment</span>
@@ -63,7 +85,8 @@
     <section class="hero-slider-section" id="home">
       <!-- Full-bleed Video Background (Auto-playing Playlist: Video 1 -> 2 -> 3) -->
       <div class="hero-slide-media" style="position: absolute; inset: 0;">
-        <video id="hero-bg-video" autoplay loop muted playsinline poster="assets/images/bridal_1.jpg" style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.4s ease;">
+        <video id="hero-bg-video" autoplay loop muted playsinline poster="assets/images/bridal_1.jpg"
+          style="width: 100%; height: 100%; object-fit: cover; transition: opacity 0.4s ease;">
           <source src="assets/videos/bridal_reel_1.mp4" type="video/mp4">
         </video>
       </div>
@@ -76,7 +99,8 @@
           <h1 class="hero-title">Where Royalty Meets<br><span class="text-gradient-gold">Timeless Elegance</span></h1>
           <div class="hero-script">Bridal Hair & Beauty by Lasanthi</div>
           <p class="hero-desc">
-            Sri Lanka's premier destination for authentic Kandyan Osari draping, heirloom jewelry placement, bespoke Western bridal glam, and certified beauty academy courses in Dambulla.
+            Sri Lanka's premier destination for authentic Kandyan Osari draping, heirloom jewelry placement, bespoke
+            Western bridal glam, and certified beauty academy courses in Dambulla.
           </p>
           <div class="hero-cta-group">
             <button class="btn-gold" data-open-modal="booking" data-service="Bridal Makeup">
@@ -92,7 +116,8 @@
       </div>
 
       <!-- Discreet Sound Toggle Button -->
-      <button class="hero-sound-mini-btn" id="hero-sound-toggle" title="Toggle Video Sound" aria-label="Toggle video sound">
+      <button class="hero-sound-mini-btn" id="hero-sound-toggle" title="Toggle Video Sound"
+        aria-label="Toggle video sound">
         <i class="fa-solid fa-volume-xmark"></i>
       </button>
     </section>
@@ -116,7 +141,7 @@
             <div class="stat-label">Luxury Global Cosmetics</div>
           </div>
           <div class="stat-card-item reveal-on-scroll delay-4">
-            <div class="stat-number">5.0 ★</div>
+            <div class="stat-number">5.0 <i class="fa-solid fa-star text-gold" style="font-size: 0.8em;"></i></div>
             <div class="stat-label">Top Rated in Dambulla</div>
           </div>
         </div>
@@ -126,7 +151,7 @@
     <!-- ==========================================================================
          Floating Services Ribbon
          ========================================================================== -->
-    <div class="container services-ribbon-wrapper" id="services" style="margin-top: 40px; margin-bottom: 30px;">
+    <div class="container services-ribbon-wrapper" id="services">
       <div class="services-ribbon reveal-on-scroll scale-up">
         <div class="service-card-mini" data-open-modal="booking" data-service="Bridal Makeup">
           <div class="service-icon-box">
@@ -178,19 +203,22 @@
     <section class="stylist-spotlight-section">
       <div class="container spotlight-grid">
         <div class="stylist-portrait-card reveal-on-scroll slide-left">
-          <img src="assets/images/bridal_2.jpg" alt="Lasanthi Bandaranayaka Master Bridal Stylist">
+          <img src="assets/images/lasanthi-bandaranayaka-founder.jpg"
+            alt="Lasanthi Bandaranayaka Master Bridal Stylist & Founder">
           <div class="stylist-seal">
             <i class="fa-solid fa-crown"></i>
             <span>Master<br>Stylist</span>
           </div>
         </div>
 
-        <div class="reveal-on-scroll slide-right">
+        <div class="spotlight-content reveal-on-scroll slide-right">
           <span class="tag-label">Meet The Founder</span>
-          <h2 class="section-heading" style="font-size: 2.8rem;">Lasanthi Bandaranayaka</h2>
-          <div class="hero-script" style="font-size: 2.2rem; margin-bottom: 20px;">Master Beautician & Educator</div>
-          <p style="color: #c9bfb2; font-size: 1.05rem; line-height: 1.8; margin-bottom: 24px;">
-            “A bride's wedding day is one of the most sacred moments of her life. My mission is to honor our rich Sri Lankan Kandyan heritage with regal perfection while applying contemporary high-fashion makeup techniques that keep our brides radiant and confident from morning ceremonies to evening dances.”
+          <h2 class="section-heading spotlight-title">Lasanthi Bandaranayaka</h2>
+          <div class="hero-script spotlight-subtitle">Master Beautician & Educator</div>
+          <p class="spotlight-quote">
+            &ldquo;A bride's wedding day is one of the most sacred moments of her life. My mission is to honor our rich
+            Sri Lankan Kandyan heritage with regal perfection while applying contemporary high-fashion makeup techniques
+            that keep our brides radiant and confident from morning ceremonies to evening dances.&rdquo;
           </p>
 
           <div class="about-badges" style="margin-bottom: 30px;">
@@ -231,24 +259,36 @@
           <span class="tag-label">The Salon Ambiance</span>
           <h2 class="section-heading">Step Into Pure Luxury</h2>
           <p class="section-subtext">
-            Located in Dambulla on Kandalama Road, our salon combines warm champagne gold accents, private suites, and hygienic climate control.
+            Located in Dambulla on Kandalama Road, our salon combines warm champagne gold accents, private suites, and
+            hygienic climate control.
           </p>
         </div>
 
         <div class="salon-gallery-grid">
           <div class="salon-feature-card reveal-on-scroll delay-1">
-            <img src="assets/images/salon_interior.jpg" alt="Lasanthi Salon Luxury Styling Lounge">
+            <img src="assets/images/salon_exterior_front.jpg" alt="Lasanthi Bandaranayaka Salon and Academy Exterior">
             <div class="salon-card-overlay">
-              <h3 class="salon-card-title">Main Styling Studio & Hair Lounge</h3>
-              <p class="salon-card-desc">Backlit arched vanity mirrors, plush ergonomic chairs, and tranquil ambiance.</p>
+              <h3 class="salon-card-title">Grand Salon & Academy Entrance</h3>
+              <p class="salon-card-desc">Modern glass facade, illuminated royal gold signage, and spacious guest parking
+                on Kandalama Road.</p>
             </div>
           </div>
 
           <div class="salon-feature-card reveal-on-scroll delay-2">
-            <img src="assets/images/salon_bridal_lounge.jpg" alt="VIP Bridal Dressing Suite">
+            <img src="assets/images/salon_interior_main.jpg" alt="Lasanthi Salon Luxury Styling Lounge">
             <div class="salon-card-overlay">
-              <h3 class="salon-card-title">Private VIP Bridal Suite</h3>
-              <p class="salon-card-desc">Exclusive royal dressing sanctuary for bride and entourage with Kandyan saree showcase.</p>
+              <h3 class="salon-card-title">Main Styling Studio & Hair Lounge</h3>
+              <p class="salon-card-desc">Backlit arched vanity mirrors, plush ergonomic chairs, and tranquil luxury
+                ambiance.</p>
+            </div>
+          </div>
+
+          <div class="salon-feature-card reveal-on-scroll delay-3">
+            <img src="assets/images/salon_spa_suite.jpg" alt="VIP Facial, Spa & Pedicure Sanctuary">
+            <div class="salon-card-overlay">
+              <h3 class="salon-card-title">VIP Facial, Spa & Pedicure Sanctuary</h3>
+              <p class="salon-card-desc">Private aesthetic therapy beds, botanical flower feature wall, and relaxing
+                foot spa stations.</p>
             </div>
           </div>
         </div>
@@ -273,7 +313,8 @@
             <span class="tag-label">Beauty Academy</span>
             <h2 class="academy-title">Build Your Career<br>in the Beauty Industry</h2>
             <p class="academy-desc">
-              Gain professional skills with hands-on training from industry experts. Our academy prepares you for a rewarding career with recognized credentials, live model practice, and salon business mastery.
+              Gain professional skills with hands-on training from industry experts. Our academy prepares you for a
+              rewarding career with recognized credentials, live model practice, and salon business mastery.
             </p>
 
             <ul class="academy-checklist">
@@ -307,49 +348,70 @@
           <span class="tag-label">Videos in Motion</span>
           <h2 class="section-heading">Live Transformations & Artistry</h2>
           <p class="section-subtext">
-            Watch our salon transformations, intricate Kandyan saree draping, and sparkling bridal moments captured live in our studio.
+            Watch our salon transformations, intricate Kandyan saree draping, and sparkling bridal moments captured live
+            in our studio.
           </p>
         </div>
 
-        <div class="videos-grid">
-          <!-- Video 1 -->
-          <div class="video-card reveal-on-scroll delay-1">
-            <div class="video-wrapper">
-              <span class="video-badge"><i class="fa-solid fa-play"></i> Bridal Reel 1</span>
-              <video src="assets/videos/bridal_reel_1.mp4" playsinline loop preload="metadata" poster="assets/images/bridal_1.jpg"></video>
-              <button class="video-play-btn" aria-label="Play video"><i class="fa-solid fa-play"></i></button>
-            </div>
-            <div class="video-info">
-              <h3 class="video-title">Kandyan Bride Styling & Draping</h3>
-              <p class="video-sub">Traditional royal ornaments, nalalpatiya & exquisite jewelry placement.</p>
+        <div class="video-carousel-wrapper reveal-on-scroll scale-up">
+          <button class="video-carousel-arrow prev" id="video-slider-prev" aria-label="Previous video">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+
+          <div class="video-carousel-viewport" id="video-carousel-viewport">
+            <div class="videos-slider-track" id="videos-slider-track">
+              <!-- Video 1 -->
+              <div class="video-card">
+                <div class="video-wrapper">
+                  <span class="video-badge"><i class="fa-solid fa-play"></i> Bridal Reel 1</span>
+                  <video src="assets/videos/bridal_reel_1.mp4" playsinline loop preload="metadata"
+                    poster="assets/images/bridal_1.jpg"></video>
+                  <button class="video-play-btn" aria-label="Play video"><i class="fa-solid fa-play"></i></button>
+                </div>
+                <div class="video-info">
+                  <h3 class="video-title">Kandyan Bride Styling & Draping</h3>
+                  <p class="video-sub">Traditional royal ornaments, nalalpatiya & exquisite jewelry placement.</p>
+                </div>
+              </div>
+
+              <!-- Video 2 -->
+              <div class="video-card">
+                <div class="video-wrapper">
+                  <span class="video-badge"><i class="fa-solid fa-play"></i> Bridal Reel 2</span>
+                  <video src="assets/videos/bridal_reel_2.mp4" playsinline loop preload="metadata"
+                    poster="assets/images/bridal_2.jpg"></video>
+                  <button class="video-play-btn" aria-label="Play video"><i class="fa-solid fa-play"></i></button>
+                </div>
+                <div class="video-info">
+                  <h3 class="video-title">Glow Makeup & Hair Highlights</h3>
+                  <p class="video-sub">Soft romantic glam with flawless contouring and fresh floral crown.</p>
+                </div>
+              </div>
+
+              <!-- Video 3 -->
+              <div class="video-card">
+                <div class="video-wrapper">
+                  <span class="video-badge"><i class="fa-solid fa-play"></i> Bridal Reel 3</span>
+                  <video src="assets/videos/bridal_reel_3.mp4" playsinline loop preload="metadata"
+                    poster="assets/images/bridal_3.jpg"></video>
+                  <button class="video-play-btn" aria-label="Play video"><i class="fa-solid fa-play"></i></button>
+                </div>
+                <div class="video-info">
+                  <h3 class="video-title">Academy Hands-On Masterclass</h3>
+                  <p class="video-sub">Empowering next-gen bridal artists with live practice & expert guidance.</p>
+                </div>
+              </div>
             </div>
           </div>
 
-          <!-- Video 2 -->
-          <div class="video-card reveal-on-scroll delay-2">
-            <div class="video-wrapper">
-              <span class="video-badge"><i class="fa-solid fa-play"></i> Bridal Reel 2</span>
-              <video src="assets/videos/bridal_reel_2.mp4" playsinline loop preload="metadata" poster="assets/images/bridal_2.jpg"></video>
-              <button class="video-play-btn" aria-label="Play video"><i class="fa-solid fa-play"></i></button>
-            </div>
-            <div class="video-info">
-              <h3 class="video-title">Glow Makeup & Hair Highlights</h3>
-              <p class="video-sub">Soft romantic glam with flawless contouring and fresh floral crown.</p>
-            </div>
-          </div>
+          <button class="video-carousel-arrow next" id="video-slider-next" aria-label="Next video">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
 
-          <!-- Video 3 -->
-          <div class="video-card reveal-on-scroll delay-3">
-            <div class="video-wrapper">
-              <span class="video-badge"><i class="fa-solid fa-play"></i> Bridal Reel 3</span>
-              <video src="assets/videos/bridal_reel_3.mp4" playsinline loop preload="metadata" poster="assets/images/bridal_3.jpg"></video>
-              <button class="video-play-btn" aria-label="Play video"><i class="fa-solid fa-play"></i></button>
-            </div>
-            <div class="video-info">
-              <h3 class="video-title">Bridal Hair Artistry & Finish</h3>
-              <p class="video-sub">Intricate hair twists, fresh orchids and elegant veil draping.</p>
-            </div>
-          </div>
+        <div class="video-carousel-controls">
+          <div class="video-carousel-dots" id="video-carousel-dots"></div>
+          <div class="video-carousel-counter" id="video-carousel-counter"></div>
         </div>
       </div>
     </section>
@@ -362,8 +424,8 @@
         <div class="gallery-header-row reveal-on-scroll">
           <div>
             <span class="tag-label">Our Gallery</span>
-            <h2 class="section-heading" style="color: var(--text-dark);">Our Work Speaks for Itself</h2>
-            <p class="section-subtext" style="color: var(--text-dark-muted);">Explore our latest bridal and beauty transformations.</p>
+            <h2 class="section-heading">Our Work Speaks for Itself</h2>
+            <p class="section-subtext">Explore our latest bridal and beauty transformations.</p>
           </div>
           <a href="gallery.html" class="btn-gold">
             <i class="fa-solid fa-camera"></i>
@@ -408,34 +470,139 @@
     </section>
 
     <!-- ==========================================================================
-         Bottom Testimonial & Contact Bar
+         Client Testimonials & Stories Section (Swipeable Luxury Carousel)
          ========================================================================== -->
-    <section class="bottom-showcase-section" id="contact">
-      <div class="container bottom-grid">
-        <!-- Testimonials -->
-        <div class="testimonial-box reveal-on-scroll slide-left">
-          <div class="testimonial-tag"><i class="fa-solid fa-quote-left"></i> What Our Clients Say</div>
-          <p class="testimonial-quote" id="testimonial-quote">
-            “Lasanthi Salon gave me the most beautiful bridal look. Highly recommended! Every detail of my Kandyan jewelry and headpiece was placed to absolute perfection.”
-          </p>
-          <div class="client-profile">
-            <img src="assets/images/client_nimali.jpg" alt="Bride Reviewer" class="client-avatar" id="client-avatar">
-            <div>
-              <div class="client-name" id="client-name">Nimali Perera</div>
-              <div class="client-role" id="client-role">Kandyan Bride</div>
-            </div>
+    <section class="testimonials-section" id="testimonials">
+      <div class="container">
+        <div class="testimonials-header-row reveal-on-scroll">
+          <div>
+            <span class="tag-label"><i class="fa-solid fa-heart text-gold"></i> Client Stories & Love</span>
+            <h2 class="section-heading">Words From Our Royal Brides & Clients</h2>
+            <p class="section-subtext">
+              Read authentic reviews and heartfelt moments from brides, salon guests, and academy graduates who trusted
+              Lasanthi Bandaranayaka.
+            </p>
           </div>
-          <!-- Dots -->
-          <div style="display: flex; gap: 8px; margin-top: 18px;">
-            <span class="t-dot" onclick="setTestimonial(0)" style="width: 10px; height: 10px; border-radius: 50%; background: var(--color-gold-400); cursor: pointer; transition: 0.3s;"></span>
-            <span class="t-dot" onclick="setTestimonial(1)" style="width: 10px; height: 10px; border-radius: 50%; background: var(--color-gold-400); opacity: 0.4; cursor: pointer; transition: 0.3s;"></span>
-            <span class="t-dot" onclick="setTestimonial(2)" style="width: 10px; height: 10px; border-radius: 50%; background: var(--color-gold-400); opacity: 0.4; cursor: pointer; transition: 0.3s;"></span>
+
+          <!-- Slider Arrow Controls & Indicator -->
+          <div class="testimonials-nav-controls">
+            <button class="t-carousel-arrow" id="testimonials-prev-btn" aria-label="Previous testimonials">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <div class="testimonials-counter" id="testimonials-counter">1 / 4</div>
+            <button class="t-carousel-arrow" id="testimonials-next-btn" aria-label="Next testimonials">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
           </div>
         </div>
 
+        <!-- Swipeable Viewport -->
+        <div class="testimonials-viewport reveal-on-scroll scale-up" id="testimonials-viewport">
+          <div class="testimonials-track" id="testimonials-container">
+            <div class="testimonial-luxury-card reveal-on-scroll delay-1">
+              <div class="t-card-top">
+                <div class="t-card-stars">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <span class="t-service-pill"><i class="fa-solid fa-crown"></i> Bridal Dressing</span>
+              </div>
+              <p class="t-quote-text">
+                &ldquo;Lasanthi Salon gave me the most magnificent Kandyan bridal look. Every detail of my Nalalpatiya,
+                heavy regalia jewelry, and traditional saree pleats was placed to absolute royal perfection!&rdquo;
+              </p>
+              <div class="t-client-row">
+                <img src="assets/images/client_nimali.jpg" alt="Nimali Perera" class="t-client-avatar">
+                <div class="t-client-info">
+                  <h4 class="t-client-name">Nimali Perera</h4>
+                  <div class="t-client-sub">Kandyan Bride • Dambulla</div>
+                </div>
+                <div class="t-verified-badge" title="Verified Bride">
+                  <i class="fa-solid fa-circle-check"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-luxury-card reveal-on-scroll delay-2">
+              <div class="t-card-top">
+                <div class="t-card-stars">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <span class="t-service-pill"><i class="fa-solid fa-gem"></i> Bridal VIP Suite</span>
+              </div>
+              <p class="t-quote-text">
+                &ldquo;The VIP dressing suite experience at Lasanthi Bandaranayaka Salon was beyond a dream. Lasanthi is
+                a genuine master artist. My wedding photos look so regal and timeless!&rdquo;
+              </p>
+              <div class="t-client-row">
+                <img src="assets/images/bridal_1.jpg" alt="Dilki Madushani" class="t-client-avatar">
+                <div class="t-client-info">
+                  <h4 class="t-client-name">Dilki Madushani</h4>
+                  <div class="t-client-sub">Bridal Client • Kandy</div>
+                </div>
+                <div class="t-verified-badge" title="Verified Bride">
+                  <i class="fa-solid fa-circle-check"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-luxury-card reveal-on-scroll delay-3">
+              <div class="t-card-top">
+                <div class="t-card-stars">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <span class="t-service-pill"><i class="fa-solid fa-graduation-cap"></i> Academy Diploma</span>
+              </div>
+              <p class="t-quote-text">
+                &ldquo;I completed the Advanced Bridal Artistry Diploma at Lasanthi Academy. The hands-on practical
+                masterclasses gave me the exact skills and confidence to launch my own salon!&rdquo;
+              </p>
+              <div class="t-client-row">
+                <img src="assets/images/client_sanduni.jpg" alt="Sanduni Jayawardena" class="t-client-avatar">
+                <div class="t-client-info">
+                  <h4 class="t-client-name">Sanduni Jayawardena</h4>
+                  <div class="t-client-sub">Academy Graduate • Kurunegala</div>
+                </div>
+                <div class="t-verified-badge" title="Verified Student">
+                  <i class="fa-solid fa-circle-check"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pagination Dots -->
+        <div class="testimonials-dots" id="testimonials-dots"></div>
+
+        <!-- Share Review CTA Link Box -->
+        <div class="testimonials-cta-bar reveal-on-scroll">
+          <div class="testimonials-cta-text">
+            <h3 class="testimonials-cta-title">Visited Lasanthi Salon Recently?</h3>
+            <p class="testimonials-cta-desc">We treasure every bride and client story. Share your experience with us and
+              be featured in our royal gallery.</p>
+          </div>
+          <a href="feedback.php" class="btn-gold" style="white-space: nowrap;">
+            <i class="fa-solid fa-feather-pointed"></i>
+            <span>Leave a Review</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         Bottom Contact & Booking Call-to-Action Bar
+         ========================================================================== -->
+    <section class="bottom-showcase-section" id="contact">
+      <div class="container bottom-grid">
         <!-- Get In Touch -->
-        <div class="contact-box reveal-on-scroll scale-up">
-          <h3 class="contact-title">Get in Touch</h3>
+        <div class="contact-box reveal-on-scroll slide-left">
+          <h3 class="contact-title">Visit Our Royal Salon</h3>
+          <p style="color: #bfae9c; font-size: 0.95rem; margin-bottom: 20px; line-height: 1.6;">
+            Conveniently situated along Kandalama Road in Dambulla with dedicated guest parking and climate-controlled
+            VIP suites.
+          </p>
           <ul class="contact-list">
             <li>
               <i class="fa-solid fa-location-dot"></i>
@@ -447,11 +614,15 @@
             </li>
             <li>
               <i class="fa-brands fa-whatsapp"></i>
-              <a href="https://wa.me/94777958184" target="_blank" rel="noopener">077 795 8184 (WhatsApp)</a>
+              <a href="https://wa.me/94777958184" target="_blank" rel="noopener">077 795 8184 (WhatsApp Booking)</a>
             </li>
             <li>
               <i class="fa-solid fa-envelope"></i>
               <a href="mailto:Dinethisuranga135@gmail.com">Dinethisuranga135@gmail.com</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-clock"></i>
+              <span>Open Daily: 8:30 AM – 7:00 PM</span>
             </li>
           </ul>
         </div>
@@ -459,10 +630,11 @@
         <!-- Shine Call to Action Banner -->
         <div class="shine-banner reveal-on-scroll slide-right">
           <div class="shine-title">Let Your Beauty<br>Shine with Us...</div>
-          <p class="shine-sub">Book your personalized bridal consultation or course inquiry today.</p>
+          <p class="shine-sub">Book your personalized bridal consultation or beauty treatment with Master Stylist
+            Lasanthi Bandaranayaka today.</p>
           <button class="btn-dark-pill" data-open-modal="booking">
             <i class="fa-solid fa-calendar-check"></i>
-            <span>Book Now</span>
+            <span>Book Your Appointment</span>
           </button>
         </div>
       </div>
@@ -476,7 +648,8 @@
     <div class="container">
       <div class="footer-row">
         <a href="index.html" class="brand-logo">
-          <img src="assets/images/logo_transparent.png" alt="Lasanthi Bandaranayaka Salon and Academy (Pvt) Ltd" style="height: 80px; width: auto; filter: drop-shadow(0 4px 15px rgba(212,175,55,0.3));">
+          <img src="assets/images/logo_transparent.png" alt="Lasanthi Bandaranayaka Salon and Academy (Pvt) Ltd"
+            style="height: 80px; width: auto; filter: drop-shadow(0 4px 15px rgba(212,175,55,0.3));">
         </a>
 
         <ul class="footer-nav">
@@ -488,18 +661,28 @@
           <li><a href="videos.html">Videos</a></li>
           <li><a href="gallery.html">Gallery</a></li>
           <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="feedback.php" style="color: var(--color-gold-300);"><i class="fa-solid fa-star"
+                style="font-size: 0.75rem;"></i> Review Us</a></li>
         </ul>
 
         <div class="social-links">
-          <a href="https://facebook.com" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="https://instagram.com" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-          <a href="https://youtube.com" target="_blank" rel="noopener" class="social-icon" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-          <a href="https://wa.me/94777958184" target="_blank" rel="noopener" class="social-icon" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="https://facebook.com" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook"><i
+              class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://instagram.com" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram"><i
+              class="fa-brands fa-instagram"></i></a>
+          <a href="https://youtube.com" target="_blank" rel="noopener" class="social-icon" aria-label="YouTube"><i
+              class="fa-brands fa-youtube"></i></a>
+          <a href="https://wa.me/94777958184" target="_blank" rel="noopener" class="social-icon"
+            aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
         </div>
       </div>
 
       <div class="footer-bottom-copy">
-        &copy; 2025 Lasanthi Bandaranayaka. All Rights Reserved. No. 607, Kandalama Road, Lasanthi Salon, Dambulla. &bull; <a href="admin/login.php" style="color: var(--color-gold-400); text-decoration: none; opacity: 0.8;"><i class="fa-solid fa-lock" style="font-size: 0.75rem;"></i> Staff Portal</a>
+        <div class="footer-copy-text">&copy; 2025 Lasanthi Bandaranayaka. All Rights Reserved.</div>
+        <div class="footer-address-text">No. 607, Kandalama Road, Lasanthi Salon, Dambulla.</div>
+        <div class="footer-staff-wrap">
+          <a href="admin/login.php" class="footer-staff-link"><i class="fa-solid fa-lock"></i> Staff Portal</a>
+        </div>
       </div>
     </div>
   </footer>
@@ -510,10 +693,10 @@
   <div class="modal-backdrop" id="appointment-modal">
     <div class="modal-content-card">
       <button class="modal-close-btn" aria-label="Close modal"><i class="fa-solid fa-xmark"></i></button>
-      <div style="text-align: center; margin-bottom: 24px;">
+      <div class="modal-header-wrap">
         <span class="tag-label">Reservation</span>
-        <h2 style="font-family: var(--font-serif); color: #fff; font-size: 1.8rem;">Book an Appointment</h2>
-        <p style="color: var(--text-muted); font-size: 0.88rem; margin-top: 4px;">Connect with Lasanthi Salon Dambulla directly via WhatsApp</p>
+        <h2 class="modal-title">Book an Appointment</h2>
+        <p class="modal-subtitle">Connect with Lasanthi Salon Dambulla directly via WhatsApp</p>
       </div>
 
       <form id="booking-form">
@@ -547,10 +730,12 @@
 
         <div class="form-group">
           <label class="form-label" for="booking-notes">Special Requests / Questions</label>
-          <textarea id="booking-notes" class="form-control" rows="3" placeholder="Tell us about your wedding date, event, or inquiry..."></textarea>
+          <textarea id="booking-notes" class="form-control" rows="3"
+            placeholder="Tell us about your wedding date, event, or inquiry..."></textarea>
         </div>
 
-        <button type="submit" class="btn-gold" style="width: 100%; padding: 14px; font-size: 1rem; border-radius: var(--radius-md);">
+        <button type="submit" class="btn-gold"
+          style="width: 100%; padding: 14px; font-size: 1rem; border-radius: var(--radius-md);">
           <i class="fa-brands fa-whatsapp" style="font-size: 1.2rem;"></i>
           <span>Send Booking Request via WhatsApp</span>
         </button>
@@ -562,19 +747,26 @@
        Lightbox Modal
        ========================================================================== -->
   <div class="modal-backdrop" id="lightbox-modal">
-    <div style="position: relative; max-width: 900px; width: 95%; max-height: 90vh; display: flex; flex-direction: column; align-items: center;">
-      <button class="modal-close-btn lightbox-close" style="top: -45px; right: 0;"><i class="fa-solid fa-xmark"></i></button>
-      <img id="lightbox-img" src="" alt="Gallery Preview" style="max-height: 80vh; width: auto; max-width: 100%; border-radius: 16px; border: 2px solid var(--color-gold-400); box-shadow: var(--shadow-gold-lg);">
-      <p id="lightbox-caption" style="color: #fff; margin-top: 14px; font-size: 1.1rem; font-family: var(--font-serif); text-align: center;"></p>
+    <div
+      style="position: relative; max-width: 900px; width: 95%; max-height: 90vh; display: flex; flex-direction: column; align-items: center;">
+      <button class="modal-close-btn lightbox-close" style="top: -45px; right: 0;"><i
+          class="fa-solid fa-xmark"></i></button>
+      <img id="lightbox-img" src="" alt="Gallery Preview"
+        style="max-height: 80vh; width: auto; max-width: 100%; border-radius: 16px; border: 2px solid var(--color-gold-400); box-shadow: var(--shadow-gold-lg);">
+      <p id="lightbox-caption"
+        style="color: #fff; margin-top: 14px; font-size: 1.1rem; font-family: var(--font-serif); text-align: center;">
+      </p>
     </div>
   </div>
 
   <!-- Floating WhatsApp Quick Button -->
-  <a href="https://wa.me/94777958184?text=Hello%20Lasanthi%20Salon%20%26%20Academy%2C%20I%20would%20like%20to%20inquire%20about%20your%20services" class="floating-wa-btn" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <a href="https://wa.me/94777958184?text=Hello%20Lasanthi%20Salon%20%26%20Academy%2C%20I%20would%20like%20to%20inquire%20about%20your%20services"
+    class="floating-wa-btn" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
 
   <!-- Main JavaScript File -->
   <script src="assets/js/main.js"></script>
 </body>
+
 </html>

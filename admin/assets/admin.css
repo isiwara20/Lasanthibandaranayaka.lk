@@ -440,3 +440,63 @@ a {
   .form-grid { grid-template-columns: 1fr; }
   .admin-gallery-grid { grid-template-columns: 1fr; }
 }
+
+/* ==========================================================================
+   Admin Light Theme
+   ========================================================================== */
+[data-theme="light"],
+body[data-theme="light"] {
+  --admin-bg: #f8f5f0;
+  --admin-sidebar: #ffffff;
+  --admin-card: #ffffff;
+  --admin-card-hover: #faf6ef;
+  --admin-border: rgba(212, 175, 55, 0.35);
+  --admin-text: #1b1713;
+  --admin-muted: #6b6052;
+  background: #f8f5f0;
+  color: #1b1713;
+}
+
+[data-theme="light"] .admin-page-title,
+[data-theme="light"] .card-title,
+[data-theme="light"] .sidebar-title,
+[data-theme="light"] .stat-num {
+  color: #1b1713;
+}
+
+[data-theme="light"] .nav-item a {
+  color: #574b3d;
+}
+
+[data-theme="light"] .nav-item a:hover {
+  background: rgba(212, 175, 55, 0.12);
+  color: #110e08;
+}
+
+[data-theme="light"] .admin-input,
+[data-theme="light"] .admin-select,
+[data-theme="light"] .admin-textarea {
+  background: #fdfcfb;
+  border-color: rgba(212, 175, 55, 0.35);
+  color: #1b1713;
+}
+
+[data-theme="light"] .admin-table th {
+  color: #9e760c;
+}
+
+[data-theme="light"] .admin-table td {
+  color: #2b2319;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="light"] .admin-table tr:hover td {
+  background: rgba(212, 175, 55, 0.06);
+}
+
+[data-theme="light"] .theme-toggle-btn {
+  background: #ffffff;
+  color: var(--admin-gold);
+  border-color: rgba(212, 175, 55, 0.4);
+}
+

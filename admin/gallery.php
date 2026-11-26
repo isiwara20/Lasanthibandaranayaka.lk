@@ -77,6 +77,7 @@ $categories = ['Kandyan Bridal', 'Western Bridal', 'Hair Artistry', 'Makeup Arti
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="assets/admin.css">
+  <script>(function(){var t=localStorage.getItem('admin_theme')||'dark';document.documentElement.setAttribute('data-theme',t);})();</script>
 </head>
 <body>
   <div class="admin-layout">
@@ -96,6 +97,9 @@ $categories = ['Kandyan Bridal', 'Western Bridal', 'Hair Artistry', 'Makeup Arti
           <a href="banner_videos.php"><i class="fa-solid fa-film"></i> <span>Banner Videos</span></a>
         </li>
         <li class="nav-item">
+          <a href="videos.php"><i class="fa-solid fa-video"></i> <span>Showcase Videos</span></a>
+        </li>
+        <li class="nav-item">
           <a href="bookings.php"><i class="fa-solid fa-calendar-check"></i> <span>Bookings</span></a>
         </li>
         <li class="nav-item">
@@ -104,11 +108,14 @@ $categories = ['Kandyan Bridal', 'Western Bridal', 'Hair Artistry', 'Makeup Arti
         <li class="nav-item active">
           <a href="gallery.php"><i class="fa-solid fa-images"></i> <span>Gallery Photos</span></a>
         </li>
+        <li class="nav-item">
+          <a href="testimonials.php"><i class="fa-solid fa-star"></i> <span>Testimonials</span></a>
+        </li>
         <li class="nav-item" style="margin-top: 20px; border-top: 1px solid var(--admin-border); padding-top: 14px;">
           <a href="../index.html" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> <span>View Live Website</span></a>
         </li>
-        <li class="nav-item">
-          <a href="logout.php" style="color: #e74c3c;"><i class="fa-solid fa-right-from-bracket"></i> <span>Logout</span></a>
+        <li class="nav-item"><a href="javascript:void(0)" id="admin-theme-toggle"><i class="fa-solid fa-circle-half-stroke"></i> <span>Light / Dark Theme</span></a></li>
+        <li class="nav-item"><a href="logout.php" style="color: #e74c3c;"><i class="fa-solid fa-right-from-bracket"></i> <span>Logout</span></a>
         </li>
       </ul>
     </aside>
@@ -200,5 +207,7 @@ $categories = ['Kandyan Bridal', 'Western Bridal', 'Hair Artistry', 'Makeup Arti
       </div>
     </main>
   </div>
+  <script src="assets/admin.js"></script>
 </body>
 </html>
+

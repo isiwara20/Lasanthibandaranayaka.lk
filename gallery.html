@@ -1,24 +1,37 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Our Gallery | Lasanthi Bandaranayaka Salon & Academy Dambulla</title>
-  <meta name="description" content="Browse our official bridal photo gallery. Traditional Kandyan brides, Western bridal glam, hair flowers, and academy student styling sessions.">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%23120e09' stroke='%23d4af37' stroke-width='4'/><text x='50%' y='58%' font-family='serif' font-size='42' font-weight='bold' fill='%23d4af37' text-anchor='middle'>LB</text></svg>">
+  <meta name="description"
+    content="Browse our official bridal photo gallery. Traditional Kandyan brides, Western bridal glam, hair flowers, and academy student styling sessions.">
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%23120e09' stroke='%23d4af37' stroke-width='4'/><text x='50%' y='58%' font-family='serif' font-size='42' font-weight='bold' fill='%23d4af37' text-anchor='middle'>LB</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    (function () {
+      const savedTheme = localStorage.getItem('lasanthi_theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    })();
+  </script>
 </head>
+
 <body>
 
   <!-- Header -->
-  <header class="site-header scrolled">
+  <header class="site-header">
     <div class="container nav-wrapper">
       <a href="index.html" class="brand-logo">
-        <img src="assets/images/logo_transparent.png" alt="Lasanthi Bandaranayaka Salon and Academy (Pvt) Ltd" class="site-logo-img">
+        <img src="assets/images/logo_transparent.png" alt="Lasanthi Bandaranayaka Salon and Academy (Pvt) Ltd"
+          class="site-logo-img">
       </a>
 
       <nav>
@@ -35,6 +48,10 @@
       </nav>
 
       <div class="header-action">
+        <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle theme" title="Switch Theme">
+          <i class="fa-solid fa-sun theme-icon-sun"></i>
+          <i class="fa-solid fa-moon theme-icon-moon"></i>
+        </button>
         <button class="btn-gold" data-open-modal="booking">
           <i class="fa-regular fa-calendar-check"></i>
           <span>Book Appointment</span>
@@ -47,7 +64,7 @@
   </header>
 
   <!-- Banner -->
-  <section class="page-banner">
+  <section class="page-banner banner-gallery">
     <div class="container">
       <span class="tag-label">Bridal Portfolio</span>
       <h1 class="page-banner-title">Our Work Speaks for Itself</h1>
@@ -61,12 +78,12 @@
   </section>
 
   <!-- Gallery Section -->
-  <section class="inner-page-section" style="background: #faf7f2; color: var(--text-dark);">
+  <section class="inner-page-section gallery-section">
     <div class="container">
       <div class="section-header-center">
         <span class="tag-label">Portfolio Collection</span>
-        <h2 class="section-heading" style="color: var(--text-dark);">Bridal & Salon Showcase</h2>
-        <p class="section-subtext" style="color: var(--text-dark-muted);">Click on any photograph to enlarge in high definition.</p>
+        <h2 class="section-heading">Bridal & Salon Showcase</h2>
+        <p class="section-subtext">Click on any photograph to enlarge in high definition.</p>
       </div>
 
       <div class="gallery-grid" id="dynamic-gallery-grid" style="grid-template-columns: repeat(3, 1fr); gap: 28px;">
@@ -159,7 +176,8 @@
     <div class="container">
       <div class="footer-row">
         <a href="index.html" class="brand-logo">
-          <img src="assets/images/logo_transparent.png" alt="Lasanthi Bandaranayaka Salon and Academy (Pvt) Ltd" class="site-logo-img">
+          <img src="assets/images/logo_transparent.png" alt="Lasanthi Bandaranayaka Salon and Academy (Pvt) Ltd"
+            class="site-logo-img">
         </a>
 
         <ul class="footer-nav">
@@ -171,28 +189,43 @@
           <li><a href="videos.html">Videos</a></li>
           <li><a href="gallery.html">Gallery</a></li>
           <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="feedback.php" style="color: var(--color-gold-300);"><i class="fa-solid fa-star"
+                style="font-size: 0.75rem;"></i> Review Us</a></li>
         </ul>
 
         <div class="social-links">
-          <a href="https://facebook.com" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="https://instagram.com" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-          <a href="https://youtube.com" target="_blank" rel="noopener" class="social-icon" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-          <a href="https://wa.me/94777958184" target="_blank" rel="noopener" class="social-icon" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="https://facebook.com" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook"><i
+              class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://instagram.com" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram"><i
+              class="fa-brands fa-instagram"></i></a>
+          <a href="https://youtube.com" target="_blank" rel="noopener" class="social-icon" aria-label="YouTube"><i
+              class="fa-brands fa-youtube"></i></a>
+          <a href="https://wa.me/94777958184" target="_blank" rel="noopener" class="social-icon"
+            aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
         </div>
       </div>
 
       <div class="footer-bottom-copy">
-        &copy; 2025 Lasanthi Bandaranayaka. All Rights Reserved. No. 607, Kandalama Road, Lasanthi Salon, Dambulla.
+        <div class="footer-copy-text">&copy; 2025 Lasanthi Bandaranayaka. All Rights Reserved.</div>
+        <div class="footer-address-text">No. 607, Kandalama Road, Lasanthi Salon, Dambulla.</div>
+        <div class="footer-staff-wrap">
+          <a href="admin/login.php" class="footer-staff-link"><i class="fa-solid fa-lock"></i> Staff Portal</a>
+        </div>
       </div>
     </div>
   </footer>
 
   <!-- Lightbox Modal -->
   <div class="modal-backdrop" id="lightbox-modal">
-    <div style="position: relative; max-width: 900px; width: 95%; max-height: 90vh; display: flex; flex-direction: column; align-items: center;">
-      <button class="modal-close-btn lightbox-close" style="top: -45px; right: 0;"><i class="fa-solid fa-xmark"></i></button>
-      <img id="lightbox-img" src="" alt="Gallery Preview" style="max-height: 80vh; width: auto; max-width: 100%; border-radius: 16px; border: 2px solid var(--color-gold-400); box-shadow: var(--shadow-gold-lg);">
-      <p id="lightbox-caption" style="color: #fff; margin-top: 14px; font-size: 1.1rem; font-family: var(--font-serif); text-align: center;"></p>
+    <div
+      style="position: relative; max-width: 900px; width: 95%; max-height: 90vh; display: flex; flex-direction: column; align-items: center;">
+      <button class="modal-close-btn lightbox-close" style="top: -45px; right: 0;"><i
+          class="fa-solid fa-xmark"></i></button>
+      <img id="lightbox-img" src="" alt="Gallery Preview"
+        style="max-height: 80vh; width: auto; max-width: 100%; border-radius: 16px; border: 2px solid var(--color-gold-400); box-shadow: var(--shadow-gold-lg);">
+      <p id="lightbox-caption"
+        style="color: #fff; margin-top: 14px; font-size: 1.1rem; font-family: var(--font-serif); text-align: center;">
+      </p>
     </div>
   </div>
 
@@ -200,10 +233,10 @@
   <div class="modal-backdrop" id="appointment-modal">
     <div class="modal-content-card">
       <button class="modal-close-btn" aria-label="Close modal"><i class="fa-solid fa-xmark"></i></button>
-      <div style="text-align: center; margin-bottom: 24px;">
+      <div class="modal-header-wrap">
         <span class="tag-label">Reservation</span>
-        <h2 style="font-family: var(--font-serif); color: #fff; font-size: 1.8rem;">Book an Appointment</h2>
-        <p style="color: var(--text-muted); font-size: 0.88rem; margin-top: 4px;">Connect with Lasanthi Salon Dambulla directly via WhatsApp</p>
+        <h2 class="modal-title">Book an Appointment</h2>
+        <p class="modal-subtitle">Connect with Lasanthi Salon Dambulla directly via WhatsApp</p>
       </div>
 
       <form id="booking-form">
@@ -237,10 +270,12 @@
 
         <div class="form-group">
           <label class="form-label" for="booking-notes">Special Requests / Questions</label>
-          <textarea id="booking-notes" class="form-control" rows="3" placeholder="Tell us about your wedding date, event, or inquiry..."></textarea>
+          <textarea id="booking-notes" class="form-control" rows="3"
+            placeholder="Tell us about your wedding date, event, or inquiry..."></textarea>
         </div>
 
-        <button type="submit" class="btn-gold" style="width: 100%; padding: 14px; font-size: 1rem; border-radius: var(--radius-md);">
+        <button type="submit" class="btn-gold"
+          style="width: 100%; padding: 14px; font-size: 1rem; border-radius: var(--radius-md);">
           <i class="fa-brands fa-whatsapp" style="font-size: 1.2rem;"></i>
           <span>Send Booking Request via WhatsApp</span>
         </button>
@@ -248,7 +283,8 @@
     </div>
   </div>
 
-  <a href="https://wa.me/94777958184?text=Hello%20Lasanthi%20Salon%20%26%20Academy%2C%20I%20would%20like%20to%20inquire%20about%20your%20services" class="floating-wa-btn" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <a href="https://wa.me/94777958184?text=Hello%20Lasanthi%20Salon%20%26%20Academy%2C%20I%20would%20like%20to%20inquire%20about%20your%20services"
+    class="floating-wa-btn" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
 
@@ -289,8 +325,8 @@
           }
         }
       })
-      .catch(() => {});
+      .catch(() => { });
   </script>
 </body>
-</html>
 
+</html>

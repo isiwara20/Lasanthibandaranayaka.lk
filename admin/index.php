@@ -5,10 +5,13 @@ checkAdminAuth();
 $bookings = json_decode(@file_get_contents(__DIR__ . '/../data/bookings.json'), true) ?: [];
 $inquiries = json_decode(@file_get_contents(__DIR__ . '/../data/inquiries.json'), true) ?: [];
 $videos = json_decode(@file_get_contents(__DIR__ . '/../data/banner_videos.json'), true) ?: [];
+$showcaseVideos = json_decode(@file_get_contents(__DIR__ . '/../data/videos.json'), true) ?: [];
 $gallery = json_decode(@file_get_contents(__DIR__ . '/../data/gallery.json'), true) ?: [];
+$testimonials = json_decode(@file_get_contents(__DIR__ . '/../data/testimonials.json'), true) ?: [];
 
 $newBookingsCount = count(array_filter($bookings, fn($b) => ($b['status'] ?? '') === 'New'));
 $newInquiriesCount = count(array_filter($inquiries, fn($i) => ($i['status'] ?? '') === 'New'));
+$pendingTestimonialsCount = count(array_filter($testimonials, fn($t) => ($t['status'] ?? '') === 'pending'));
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,6 +25,7 @@ $newInquiriesCount = count(array_filter($inquiries, fn($i) => ($i['status'] ?? '
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Playfair+Display:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="assets/admin.css">
+  <script>(function(){var t=localStorage.getItem('admin_theme')||'dark';document.documentElement.setAttribute('data-theme',t);})();</script>
 </head>
 <body>
   <div class="admin-layout">
@@ -39,6 +43,9 @@ $newInquiriesCount = count(array_filter($inquiries, fn($i) => ($i['status'] ?? '
         </li>
         <li class="nav-item">
           <a href="banner_videos.php"><i class="fa-solid fa-film"></i> <span>Banner Videos</span></a>
+        </li>
+        <li class="nav-item">
+          <a href="videos.php"><i class="fa-solid fa-video"></i> <span>Showcase Videos</span></a>
         </li>
         <li class="nav-item">
           <a href="bookings.php">
@@ -59,11 +66,19 @@ $newInquiriesCount = count(array_filter($inquiries, fn($i) => ($i['status'] ?? '
         <li class="nav-item">
           <a href="gallery.php"><i class="fa-solid fa-images"></i> <span>Gallery Photos</span></a>
         </li>
+        <li class="nav-item">
+          <a href="testimonials.php">
+            <i class="fa-solid fa-star"></i> <span>Testimonials</span>
+            <?php if ($pendingTestimonialsCount > 0): ?>
+              <span class="nav-badge" style="background: #f1c40f; color: #120e06;"><?= $pendingTestimonialsCount ?></span>
+            <?php endif; ?>
+          </a>
+        </li>
         <li class="nav-item" style="margin-top: 20px; border-top: 1px solid var(--admin-border); padding-top: 14px;">
           <a href="../index.html" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> <span>View Live Website</span></a>
         </li>
-        <li class="nav-item">
-          <a href="logout.php" style="color: #e74c3c;"><i class="fa-solid fa-right-from-bracket"></i> <span>Logout</span></a>
+        <li class="nav-item"><a href="javascript:void(0)" id="admin-theme-toggle"><i class="fa-solid fa-circle-half-stroke"></i> <span>Light / Dark Theme</span></a></li>
+        <li class="nav-item"><a href="logout.php" style="color: #e74c3c;"><i class="fa-solid fa-right-from-bracket"></i> <span>Logout</span></a>
         </li>
       </ul>
     </aside>
@@ -75,10 +90,14 @@ $newInquiriesCount = count(array_filter($inquiries, fn($i) => ($i['status'] ?? '
           <h1 class="admin-page-title">Salon Overview</h1>
           <p class="admin-page-sub">Welcome back! Manage banner videos, appointment bookings, inquiries, and gallery images.</p>
         </div>
-        <div style="display: flex; gap: 12px;">
+        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
           <a href="banner_videos.php" class="btn-admin btn-admin-gold">
-            <i class="fa-solid fa-plus"></i>
-            <span>Add Banner Video</span>
+            <i class="fa-solid fa-film"></i>
+            <span>Banner Videos</span>
+          </a>
+          <a href="videos.php" class="btn-admin btn-admin-gold">
+            <i class="fa-solid fa-video"></i>
+            <span>Showcase Videos</span>
           </a>
           <a href="gallery.php" class="btn-admin btn-admin-gold">
             <i class="fa-solid fa-upload"></i>
@@ -114,10 +133,26 @@ $newInquiriesCount = count(array_filter($inquiries, fn($i) => ($i['status'] ?? '
         </div>
 
         <div class="stat-box">
+          <div class="stat-icon"><i class="fa-solid fa-video"></i></div>
+          <div>
+            <div class="stat-num"><?= count($showcaseVideos) ?></div>
+            <div class="stat-title">Showcase Videos</div>
+          </div>
+        </div>
+
+        <div class="stat-box">
           <div class="stat-icon"><i class="fa-solid fa-images"></i></div>
           <div>
             <div class="stat-num"><?= count($gallery) ?></div>
             <div class="stat-title">Gallery Photos</div>
+          </div>
+        </div>
+
+        <div class="stat-box">
+          <div class="stat-icon"><i class="fa-solid fa-star"></i></div>
+          <div>
+            <div class="stat-num"><?= count($testimonials) ?></div>
+            <div class="stat-title">Testimonials <?php if ($pendingTestimonialsCount > 0): ?><span style="color: #f1c40f; font-size: 0.8rem;">(<?= $pendingTestimonialsCount ?> pending)</span><?php endif; ?></div>
           </div>
         </div>
       </div>
@@ -220,8 +255,8 @@ $newInquiriesCount = count(array_filter($inquiries, fn($i) => ($i['status'] ?? '
                 <div>
                   <div style="color: #fff; font-weight: 600; font-size: 0.9rem;"><?= htmlspecialchars($v['title']) ?></div>
                   <div style="font-size: 0.76rem; color: var(--admin-muted);">
-                    🖥️ Large: <span style="color: var(--admin-gold);"><?= basename($v['video_desktop']) ?></span> | 
-                    📱 Mobile: <span style="color: var(--admin-gold);"><?= basename($v['video_mobile']) ?></span>
+                    ðŸ–¥ï¸ Large: <span style="color: var(--admin-gold);"><?= basename($v['video_desktop']) ?></span> | 
+                    ðŸ“± Mobile: <span style="color: var(--admin-gold);"><?= basename($v['video_mobile']) ?></span>
                   </div>
                 </div>
                 <span class="badge badge-confirmed">Active</span>
@@ -232,5 +267,7 @@ $newInquiriesCount = count(array_filter($inquiries, fn($i) => ($i['status'] ?? '
       </div>
     </main>
   </div>
+  <script src="assets/admin.js"></script>
 </body>
 </html>
+
