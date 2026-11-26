@@ -2199,6 +2199,18 @@ body:not([data-theme="light"]) .theme-icon-sun {
   gap: 6px;
 }
 
+.footer-dev-link {
+  color: var(--color-gold-400);
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.footer-dev-link:hover {
+  color: var(--color-gold-300);
+  text-decoration: underline;
+}
+
 .footer-copy-text {
   font-weight: 500;
   color: #b5a999;

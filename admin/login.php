@@ -65,7 +65,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       <form method="POST" action="login.php" style="text-align: left;">
         <div class="admin-form-group">
           <label class="admin-label" for="username"><i class="fa-solid fa-user"></i> Username</label>
-          <input type="text" id="username" name="username" class="admin-input" placeholder="admin" required autofocus>
+          <input type="text" id="username" name="username" class="admin-input" placeholder="Enter username" required autofocus>
         </div>
 
         <div class="admin-form-group">
@@ -78,10 +78,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
           <span>Sign In to Dashboard</span>
         </button>
       </form>
-
-      <div style="margin-top: 24px; font-size: 0.8rem; color: var(--admin-muted);">
-        Default Login: <code>admin</code> / <code>admin123</code>
-      </div>
     </div>
   </div>
 </body>

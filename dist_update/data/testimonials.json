@@ -1,0 +1,86 @@
+[
+    {
+        "id": "test_1795608174",
+        "name": "Chamari Athukorala",
+        "role": "Kandyan Bride",
+        "location": "Dambulla",
+        "service": "Bridal Dressing",
+        "rating": 5,
+        "quote": "My wedding look was beyond words! Lasanthi is truly the best bridal artist in Sri Lanka.",
+        "avatar": "assets\/images\/client_nimali.jpg",
+        "status": "approved",
+        "created_at": "2026-11-25 13:02:54"
+    },
+    {
+        "id": "test_1795600001",
+        "name": "Nimali Perera",
+        "role": "Kandyan Bride",
+        "location": "Dambulla",
+        "service": "Bridal Dressing",
+        "rating": 5,
+        "quote": "Lasanthi Salon gave me the most magnificent Kandyan bridal look. Every detail of my Nalalpatiya, heavy regalia jewelry, and traditional saree pleats was placed to absolute royal perfection!",
+        "avatar": "assets\/images\/client_nimali.jpg",
+        "status": "approved",
+        "created_at": "2026-11-20 10:30:00"
+    },
+    {
+        "id": "test_1795600002",
+        "name": "Dilki Madushani",
+        "role": "Bridal Client",
+        "location": "Kandy",
+        "service": "Bridal Dressing",
+        "rating": 5,
+        "quote": "The VIP dressing suite experience at Lasanthi Bandaranayaka Salon was beyond a dream. Lasanthi is a genuine master artist. My wedding photos look so regal and timeless!",
+        "avatar": "assets\/images\/bridal_1.jpg",
+        "status": "approved",
+        "created_at": "2026-11-21 14:15:00"
+    },
+    {
+        "id": "test_1795600003",
+        "name": "Sanduni Jayawardena",
+        "role": "Academy Graduate",
+        "location": "Kurunegala",
+        "service": "Academy Diploma Course",
+        "rating": 5,
+        "quote": "I completed the Advanced Bridal Artistry Diploma at Lasanthi Academy. The hands-on practical masterclasses gave me the exact skills and confidence to launch my own successful salon business.",
+        "avatar": "assets\/images\/client_sanduni.jpg",
+        "status": "approved",
+        "created_at": "2026-11-22 09:45:00"
+    },
+    {
+        "id": "test_1795600004",
+        "name": "Rashmi Wickramasinghe",
+        "role": "Western Bride",
+        "location": "Colombo",
+        "service": "Bridal Dressing",
+        "rating": 5,
+        "quote": "For my Christian church wedding, Lasanthi created a soft, glowing European bridal glam with flawless airbrush makeup that lasted all through the reception dances without a single smudge!",
+        "avatar": "assets\/images\/bridal_4.jpg",
+        "status": "approved",
+        "created_at": "2026-11-23 16:20:00"
+    },
+    {
+        "id": "test_1795600005",
+        "name": "Oshadhi Fernando",
+        "role": "Regular Salon Guest",
+        "location": "Dambulla",
+        "service": "Facial & Skincare",
+        "rating": 5,
+        "quote": "The new luxury aesthetic spa suite is heaven! The hydra-glow facial and relaxing foot spa therapy completely rejuvenated my skin. The staff are so warm, welcoming, and professional.",
+        "avatar": "assets\/images\/salon_spa_suite.jpg",
+        "status": "approved",
+        "created_at": "2026-11-24 11:10:00"
+    },
+    {
+        "id": "test_1795600006",
+        "name": "Sachini Dissanayake",
+        "role": "Going Away & Reception Bride",
+        "location": "Sigiriya",
+        "service": "Hair Styling & Makeup",
+        "rating": 5,
+        "quote": "Lasanthi did both my Poruwa morning ceremony and my evening reception look. Two completely distinct, breathtaking transformations! I felt like royalty the entire day.",
+        "avatar": "assets\/images\/bridal_3.jpg",
+        "status": "approved",
+        "created_at": "2026-11-24 17:05:00"
+    }
+]
